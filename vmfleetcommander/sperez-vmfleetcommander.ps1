@@ -29,6 +29,9 @@ az network nsg create -g $resourceGroup -n $vmname-nsg --location $location
 # NSG rule that allows SSH only from source IP address
 az network nsg rule create --resource-group $resourceGroup --nsg-name "$vmname-nsg" --name "AllowSSH" --protocol "TCP" --priority 1000 --destination-port-ranges 22 --access "Allow" --source-address-prefixes $publicIp --destination-address-prefixes "*"
 
+# NSG rule that opens UDP port 34197 to allow connectivity
+az network nsg rule create --resource-group $resourceGroup --nsg-name "$vmname-nsg" --name "AllowFactorio" --protocol "UDP" --priority 1010 --destination-port-ranges 34197 --access "Allow" --source-address-prefixes "*" --destination-address-prefixes "*"
+
 # Create NIC based on vnet settings and newly created subnet 2
 az network nic create -g $resourceGroup -n "$vmName-nic" --vnet-name "$adminUsername-vnet-1" --subnet "subnet-2" --network-security-group "$vmName-nsg"
 
