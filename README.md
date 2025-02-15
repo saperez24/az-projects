@@ -9,12 +9,9 @@ A user prompt: `$publicIp` is used to create an NSG rule that only allows for SS
 
 On deployment, this runs a bash script `server_config.sh` and ensures the latest updates are available/installed. 
 `fail2ban` is also installed. 
-The script still needs to be written and has not been pushed to this repo yet. 
 
-Download the latest Factorio headless [server files](https://factorio.com/get-download/stable/headless/linux64) using `wget`
-Extract the downloaded folder and change directory into it. 
-Generate a new save file. 
-Start the server and test connectivity. 
+Download the latest Factorio headless [server files](https://factorio.com/get-download/stable/headless/linux64) using `wget`.
+Extract the downloaded folder contents and generate a new save file. Start the server and test connectivity. 
 
 Server specs:
 - Standard B2s [2 vCPU]
