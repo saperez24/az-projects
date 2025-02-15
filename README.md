@@ -19,7 +19,8 @@ Server specs:
 - 32GB Standard HDD LRS
 
 *Skills Measured*:
-- Networking
+- VM deployment/configuration using Powershell and Bash
+- Azure Networking and NSG configuration
 - Server configuration and automation with scripts
 
 ## TO DO
