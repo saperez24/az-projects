@@ -23,4 +23,7 @@ Server specs:
 
 *Skills Measured*:
 Networking
-Server configuration
+Server configuration and automation with scripts
+
+## TO DO
+Add SSH private key (or public key) to Azure Key Vault for more secure access to VM. 
