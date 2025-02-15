@@ -9,7 +9,7 @@ $vmName = Read-Host -Prompt "Enter a name for the VM"
 $location = "westus2"
 # If publicIp is empty, there is no entry for public IP SSH access 
 $publicIp = Read-Host -Prompt "Enter your public IP address for SSH access"
-$vmSize = "Standard_B1ls" # Cheapest VM in Azure B-Series
+$vmSize = "Standard_B2s" # 2vCPU, 4GB RAM Azure VM
 
 # create resource group in the given location "westus2"
 az group create -g $resourceGroup --location $location

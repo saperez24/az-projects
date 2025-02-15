@@ -17,9 +17,9 @@ Generate a new save file.
 Start the server and test connectivity. 
 
 Server specs:
-Standard B1ls | 
-0.5GB RAM (Server requires 4GB, so upgrade accordingly) Review SKUs and determine which B-series VM to use. | 
-32GB Standard HDD LRS
+- Standard B2s [2 vCPU]
+- 4GB RAM
+- 32GB Standard HDD LRS
 
 *Skills Measured*:
 Networking
