@@ -16,4 +16,11 @@ Extract the downloaded folder and change directory into it.
 Generate a new save file. 
 Start the server and test connectivity. 
 
+Server specs:
+Standard B1ls
+0.5GB RAM
+32GB Standard HDD LRS
+
 *Skills Measured*:
+Networking
+Server configuration
