@@ -22,8 +22,8 @@ Server specs:
 - 32GB Standard HDD LRS
 
 *Skills Measured*:
-Networking
-Server configuration and automation with scripts
+- Networking
+- Server configuration and automation with scripts
 
 ## TO DO
 Add SSH private key (or public key) to Azure Key Vault for more secure access to VM. 
