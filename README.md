@@ -25,3 +25,5 @@ Server specs:
 
 ## TO DO
 Add SSH private key (or public key) to Azure Key Vault for more secure access to VM. 
+Create an ARM Template to deploy multiple VMs
+Create a VM Scale Set to have better control on the number of VMs as needed. 

@@ -3,6 +3,7 @@ az login
 
 # Create variables
 $adminUsername = Read-Host -Prompt "Enter an admin username to use"
+$adminPassword = Read-Host -Prompt "Enter an admin password to use" 
 $resourceGroup = "$adminUsername-rg"
 $vnetName = “$adminUsername-vnet-1”
 $vmName = Read-Host -Prompt "Enter a name for the VM"
@@ -43,7 +44,18 @@ az network nic ip-config update -g $resourceGroup --nic-name "$vmName-nic" --nam
 
 # Since the created nic has the specified network, subnet, and nsg rules, just attach the nic to this VM. 
 # Specify storage sku and storage size (premium ssd is default)
-az vm create -g $resourceGroup -n $vmName --size $vmSize --nics "$vmName-nic" --image "Ubuntu2204" --storage-sku Standard_LRS --os-disk-size-gb 32 --admin-username $adminUsername --generate-ssh-keys
+az vm create `
+-g $resourceGroup `
+-n $vmName `
+--size $vmSize `
+--nics "$vmName-nic" `
+--image "Ubuntu2204" `
+--storage-sku Standard_LRS `
+--os-disk-size-gb 32 `
+--admin-username $adminUsername `
+--admin-password $adminPassword `
+--generate-ssh-keys `
+--custom-data init_script.sh `
 
 # Auto shutdown VM at 9:00PM
 az vm auto-shutdown -g $resourceGroup -n $vmName --time 2100
