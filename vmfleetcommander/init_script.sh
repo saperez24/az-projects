@@ -2,8 +2,7 @@
 
 # Check for new updates and install net-tools & fail2ban
 sudo apt update
-sudo apt install net-tools -y
-sudo apt install fail2ban -y
+sudo apt install -y net-tools fail2ban
 
 # Output public IP address of VM in blue text
 LB='\033[1;34m'
