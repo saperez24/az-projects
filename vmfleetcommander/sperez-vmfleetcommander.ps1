@@ -63,7 +63,7 @@ az vm auto-shutdown -g $resourceGroup -n $vmName --time 2100
 # Get the public IP address of the VM for use with SSH
 $publicIpAddress = az vm show --resource-group $resourceGroup --name $vmName -d --query publicIps -o tsv
 Write-Output "Public IP Address for SSH: $publicIpAddress"
-Write-Host "Admin username:" $adminUsername
+Write-Output "Login using: $adminUsername@$publicIPAddress"
 
 # Power off and stop the VM with the following command:
-# az vm deallocate -g “$resourceGroup” -n "$vmName"
+Write-Output "If you wish to stop the VM, use: az vm deallocate -g $resourceGroup -n $vmName"

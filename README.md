@@ -11,7 +11,7 @@ On deployment, this runs a bash script `server_config.sh` and ensures the latest
 `fail2ban` and `net-tools` are also installed. 
 
 Download the latest Factorio headless [server files](https://factorio.com/get-download/stable/headless/linux64) using `wget`.
-Extract the downloaded folder contents and generate a new save file. Start the server and test connectivity. 
+Extract the downloaded folder contents and generate a new save file. Start the server and test connectivity. NOTE: `the mod_list.json` file in the `mods` folder may need to be tweaked. Some mods are on by default, though these are paid expansions.
 
 Server specs:
 - Standard B2s [2 vCPU]
@@ -19,11 +19,15 @@ Server specs:
 - 32GB Standard HDD LRS
 
 *Skills Measured*:
-- VM deployment/configuration using Powershell and Bash
-- Azure Networking and NSG configuration
-- Server configuration and automation with scripts
+- Automated VM deployment/configuration using Powershell. Specify VM size/SKU, disk size, and OS image.
+- Server configuration and automation with Bash scripts.
+- Understanding of networking principles, as Network Security Groups (NSG), Azure Virtual Networks (VNet), subnets, and network interfaces (NIC).
+- Knowledge of cost optimization strategies: auto-shutting down VMs to save on resources and manage cloud expenses. 
+- Infrastructure as Code (IaC) Concepts: Scripting infrastructure deployments instead of relying on Azure GUI. 
+- Utilizing Git for version control and managing script versions. 
 
 ## TO DO
-- Add SSH private key (or public key) to Azure Key Vault for more secure access to VM. 
+- Add SSH public key to Azure Key Vault for more secure access to VM. 
 - Create an ARM Template to deploy multiple VMs
 - Create a VM Scale Set to have better control on the number of VMs as needed. 
+- Utilize some kind of error checking. What if there is no Public IP address entered in the Powershell prompt? Is SSH open to the public? 

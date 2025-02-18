@@ -11,15 +11,24 @@ publicIP="$(curl https://ipinfo.io/ip)"
 echo -e "Public IP address is: ${LB}$publicIP${NC}"
 
 # Factorio headless server link
-# Download the server files as a TAR file, then extract it.
+# Download the server files as a TAR file in folder "/opt/", then extract it.
 # The extracted folder is named 'factorio'
+cd /opt/
 url='https://factorio.com/get-download/stable/headless/linux64'
 filename='factorio_headless.tar.gz'
-wget -O $filename $url  
-tar -xf $filename
+sudo wget -O $filename $url  
+sudo tar -xf $filename
 
-# Create factorio save file
+# Create factorio user and assign the new directory to it
+useradd factorio
+chown -R factorio:factorio /opt/factorio
+
+# Run the server to create save file
 ./factorio/bin/x64/factorio --create saves/my-save.zip
 
-# Run the server
-./factorio/bin/x64/factorio --start-server saves/my-save.zip
+# Go Home
+cd 
+# Server binary is located at /opt/factorio/bin/x64/factorio
+# Save command to a startup script
+echo "/opt/factorio/bin/x64/factorio --start-server /opt/saves/my-save.zip" >> server_start.sh
+chmod +x server_start.sh
