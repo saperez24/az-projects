@@ -31,4 +31,4 @@ Server specs:
 - Add SSH public key to Azure Key Vault for more secure access to VM. 
 - Create an ARM Template to deploy multiple VMs
 - Create a VM Scale Set to have better control on the number of VMs as needed. 
-- Utilize some kind of error checking. What if there is no Public IP address entered in the Powershell prompt? Is SSH open to the public? 
+- Utilize if/else in Powershell or Bash script. For now, this is fine. 
