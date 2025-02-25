@@ -1,5 +1,6 @@
 # az-projects
-Azure projects created by me, showcasing the power of the Azure Platform
+Azure projects created by me, showcasing my abilities to use the Azure Platform
+Many of these (soon to be more) projects are proofs of concepts. It all starts with "if I could use Azure to do this, how could it be done?", then going from there.
 
 # vmfleetcommander | Factorio
 Automates the deployment of an Ubuntu VM in Azure and sets up a Factorio server. 
